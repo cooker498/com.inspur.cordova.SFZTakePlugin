@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.inspur.cordova.SFZTakePlugin" version="1.0.0" 
+    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>SFZTakePlugin</name>
+    <js-module name="SFZTakePlugin" src="www/SFZTakePlugin.js">
+        <clobbers target="SFZTakePlugin" />
+    </js-module>
+
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="SFZTakePlugin">
+                <param name="android-package" value="com.inspur.cordova.SFZTakePlugin.SFZTakePlugin" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/CameraSurfaceView.java" target-dir="src/com/inspur/cordova/SFZTakePlugin" />
+        <source-file src="src/android/CameraTopRectView.java" target-dir="src/com/inspur/cordova/SFZTakePlugin" />
+        <source-file src="src/android/DisplayUtil.java" target-dir="src/com/inspur/cordova/SFZTakePlugin" />
+        <source-file src="src/android/SFZCameraActivity.java" target-dir="src/com/inspur/cordova/SFZTakePlugin" />
+        <source-file src="src/android/SFZTakePlugin.java" target-dir="src/com/inspur/cordova/SFZTakePlugin" />
+        <source-file src="src/android/MResource.java" target-dir="src/com/inspur/cordova/SFZTakePlugin" />
+        <source-file src="src/android/activity_takesfz.xml" target-dir="res/layout"/>
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:name="com.inspur.cordova.SFZTakePlugin.SFZCameraActivity" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden|screenSize" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:windowSoftInputMode="stateAlwaysHidden" android:exported="false"/>
+        </config-file>
+    </platform>
+</plugin>
