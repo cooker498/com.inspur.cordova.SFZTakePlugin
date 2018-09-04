@@ -4,7 +4,7 @@
 
 #安装方法
 `cordova plugin add https://github.com/namedjw/com.inspur.cordova.SFZTakePlugin.git --save`
-·
+
 #调用方法
 ```
 declare var LocationPlugin;
