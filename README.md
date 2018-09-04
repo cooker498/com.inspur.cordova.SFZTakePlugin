@@ -1,1 +1,3 @@
-com.inspur.cordova.SFZTakePlugin
+
+# com.inspur.cordova.SFZTakePlugin
+
